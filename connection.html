@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Connection</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="connection">
+      <h2>Контактные данные</h2>
+      <p>Наш адрес: Италия г.Рим</p>
+      <p>Телефон : +8 000 111 2222</p>
+      <p>Почта: Vittoria@gmail.com</p>
+      <hr>
+      <h2>Мы находимся здесь</h2>
+      <div id="map"></div>
+      <hr>
+    </div>
+  </div>
+    <script>
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: 41.8901925, lng: 12.4888817 }
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: uluru,
+        })
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        })
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ10MHYr0G2VNyD_LqnDBYq27y-GmKhUY&callback=initMap"
+    ></script>
+  </body>
+</html>
